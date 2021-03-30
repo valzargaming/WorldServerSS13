@@ -1,4 +1,4 @@
-	## Server name: This appears at the top of the screen in-game. In this case it will read "tgstation: station_name" where station_name is the randomly generated name of the station for the round. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
+## Server name: This appears at the top of the screen in-game. In this case it will read "tgstation: station_name" where station_name is the randomly generated name of the station for the round. Remove the # infront of SERVERNAME and replace 'tgstation' with the name of your choice
 # SERVERNAME spacestation13
 
 ## Alert levels
@@ -10,10 +10,10 @@ ALERT_RED_DOWNTO The self-destruct mechanism has been deactivated, there is stil
 ALERT_DELTA The station's self-destruct mechanism has been engaged. All crew are instructed to obey all instructions given by heads of staff. Any violations of these orders can be punished by death. This is not a drill.
 
 ## Add a # infront of this if you want to use the SQL based admin system, the legacy system uses admins.txt. You need to set up your database to use the SQL based system.
-#ADMIN_LEGACY_SYSTEM
+ADMIN_LEGACY_SYSTEM
 
 ## Add a # infront of this if you want to use the SQL based banning system. The legacy systems use the files in the data folder. You need to set up your database to use the SQL based system.
-#BAN_LEGACY_SYSTEM
+BAN_LEGACY_SYSTEM
 
 ## Add a # here if you wish to use the setup where jobs have more access. This is intended for servers with low populations - where there are not enough players to fill all roles, so players need to do more than just one job. Also for servers where they don't want people to hide in their own departments.
 JOBS_HAVE_MINIMAL_ACCESS
@@ -67,13 +67,13 @@ LOG_ATTACK
 LOG_PDA
 
 ## log world.log messages
-LOG_WORLD_OUTPUT
+# LOG_WORLD_OUTPUT
 
 ## log all Topic() calls (for use by coders in tracking down Topic issues)
 # LOG_HREFS
 
 ## log world.log and runtime errors to a file
-LOG_RUNTIME
+# LOG_RUNTIME
 
 ## log admin warning messages
 ##LOG_ADMINWARN  ## Also duplicates a bunch of other messages.
@@ -87,10 +87,10 @@ SQL_ENABLED
 ##Show developers on staffwho
 SHOW_DEVS
 ##Show mods on staffwho
-#SHOW_MODS
+SHOW_MODS
 
 ##Show mentors on staffwho
-#SHOW_EVENT
+SHOW_EVENT
 
 ## Chooses whether mods have the ability to tempban or not
 MODS_CAN_TEMPBAN
@@ -110,16 +110,16 @@ MOD_JOB_TEMPBAN_MAX 1440
 ## default probablity is 1, increase to make that mode more likely to be picked
 ## set to 0 to disable that mode
 PROBABILITY EXTENDED 1
-PROBABILITY MALFUNCTION 0	
-PROBABILITY MERCENARY 0	
-PROBABILITY WIZARD 0	
-PROBABILITY TECHNOMANCER 0	
-PROBABILITY CHANGELING 0	
-PROBABILITY CULT 0	
-PROBABILITY EXTEND-A-TRAITORMONGOUS 0	
-PROBABILITY LIZARD 0	
-PROBABILITY INTRIGUE 0	
-PROBABILITY VISITORS 0
+PROBABILITY MALFUNCTION 1
+PROBABILITY MERCENARY 1
+PROBABILITY WIZARD 1
+PROBABILITY TECHNOMANCER 1
+PROBABILITY CHANGELING 1
+PROBABILITY CULT 1
+PROBABILITY EXTEND-A-TRAITORMONGOUS 6
+PROBABILITY LIZARD 1
+PROBABILITY INTRIGUE 1
+PROBABILITY VISITORS 1
 
 ## Hash out to disable random events during the round.
 ALLOW_RANDOM_EVENTS
@@ -137,7 +137,7 @@ TRAITOR_SCALING
 #ALLOW_EXTRA_ANTAGS
 
 ## If security is prohibited from being most antagonists
-PROTECT_ROLES_FROM_ANTAGONIST
+#PROTECT_ROLES_FROM_ANTAGONIST
 
 ## Comment this out to stop admins being able to choose their personal ooccolor
 ALLOW_ADMIN_OOCCOLOR
@@ -146,13 +146,13 @@ ALLOW_ADMIN_OOCCOLOR
 # ALLOW_METADATA
 
 ## allow players to initiate a restart vote
-#ALLOW_VOTE_RESTART
+ALLOW_VOTE_RESTART
 
 ## allow players to initate a mode-change start
-#ALLOW_VOTE_MODE
+ALLOW_VOTE_MODE
 
 ## min delay (deciseconds) between voting sessions (default 10 minutes)
-VOTE_DELAY 36000
+VOTE_DELAY 6000
 
 ## time period (deciseconds) which voting session will last (default 1 minute)
 VOTE_PERIOD 600
@@ -173,13 +173,13 @@ VOTE_AUTOGAMEMODE_TIMELEFT 100
 DEFAULT_NO_VOTE
 
 ## Allow ghosts to see antagonist through AntagHUD
-#ALLOW_ANTAG_HUD
+ALLOW_ANTAG_HUD
 
 ## If ghosts use antagHUD they are no longer allowed to join the round.
-#ANTAG_HUD_RESTRICTED
+ANTAG_HUD_RESTRICTED
 
 ## allow AI job
-#ALLOW_AI
+ALLOW_AI
 
 
 ## disable abandon mob
@@ -189,7 +189,7 @@ DEFAULT_NO_VOTE
 # DONT_DEL_NEWMOB
 
 ## set a hosted by name for unix platforms
-HOSTEDBY valzargaming
+HOSTEDBY yournamehere
 
 ## Set to jobban "Guest-" accounts from Captain, HoS, HoP, CE, RD, CMO, Warden, Security, Detective, and AI positions.
 ## Set to 1 to jobban them from those positions, set to 0 to allow them.
@@ -209,21 +209,20 @@ GUEST_BAN
 #SERVERURL server.net:port
 
 ## forum address
-FORUMURL http://blue.herma.moe/	
+# FORUMURL http://example.com
 
-## Wiki address	
-WIKIURL http://bluewiki.herma.moe/	
+## Wiki address
+# WIKIURL http://example.com
 
-## Wiki search path	
-## Set this to whatever path your wiki uses to search for articles	
-## Use %s to mark where the search query should be inserted	
-WIKISEARCHURL http://bluewiki.herma.moe/index.php?title=Special%3ASearch&search=%s	
+## Wiki search path
+## Set this to whatever path your wiki uses to search for articles
+## Use %s to mark where the search query should be inserted
+# WIKISEARCHURL http://example.com/index.php?title=Special%3ASearch&search=%s
 
-## GitHub address	
-GITHUBURL https://github.com/WorldServerSS13/WorldServerSS13	
-
-## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.	
-BANAPPEALS http://blue.herma.moe
+## GitHub address
+# GITHUBURL https://github.com/example-user/example-repository
+## Ban appeals URL - usually for a forum or wherever people should go to contact your admins.
+# BANAPPEALS http://example.com
 
 ## In-game features
 ## spawns a spellbook which gives object-type spells instead of verb-type spells for the wizard
@@ -242,10 +241,10 @@ BANAPPEALS http://blue.herma.moe
 ## Remove the # to allow special 'Easter-egg' events on special holidays such as seasonal holidays and stuff like 'Talk Like a Pirate Day' :3 YAARRR
 ALLOW_HOLIDAYS
 ##Defines the ticklag for the world.  0.9 is the normal one, 0.5 is smoother.
-TICKLAG 0.4
+TICKLAG 0.9
 
 ## Defines if Tick Compensation is used.  It results in a minor slowdown of movement of all mobs, but attempts to result in a level movement speed across all ticks.  Recommended if tickrate is lowered.
-TICKCOMP 1
+TICKCOMP 0
 
 ## Whether the server will talk to other processes through socket_talk
 SOCKET_TALK 0
@@ -310,7 +309,7 @@ REQ_CULT_GHOSTWRITER 6
 CHARACTER_SLOTS 10
 
 ## Sets the number of loadout slots per character
-LOADOUT_SLOTS 10
+LOADOUT_SLOTS 3
 
 ## Uncomment to use overmap system for zlevel travel
 #USE_OVERMAP
@@ -328,15 +327,15 @@ CONTACT_LEVELS 1;5
 PLAYER_LEVELS 1;3;4;5;6
 
 ## Expected round length in minutes
-EXPECTED_ROUND_LENGTH 360
+EXPECTED_ROUND_LENGTH 180
 
 ## The lower delay between events in minutes.
 ## Affect mundane, moderate, and major events respectively
-EVENT_DELAY_LOWER 20;40;60
+EVENT_DELAY_LOWER 10;30;50
 
 ## The upper delay between events in minutes.
 ## Affect mundane, moderate, and major events respectively
-EVENT_DELAY_UPPER 40;60;80
+EVENT_DELAY_UPPER 15;45;70
 
 ## The delay until the first time an event of the given severity runs in minutes.
 ## Unset setting use the EVENT_DELAY_LOWER and EVENT_DELAY_UPPER values instead.
@@ -432,7 +431,7 @@ HUMANS_NEED_SURNAMES
 
 ## FPS ##
 #Set this to the default FPS (Can be customised in-game)
-FPS 30
+FPS 60
 
 ## Protecting people from attacking or looting from SSDs. Comment to disable.
 SSD_PROTECT
